@@ -16,3 +16,13 @@ def unique_charactors(input_string):
             return False
         charactors_seen.add(char)
     return True
+
+
+def unique_charactors_no_data_structure(input_string):
+    """Determine if a string has all unique charactors without using a data structure."""
+    while input_string:
+        char = input_string.pop(0)
+        for remaining_char in input_string:
+            if char == remaining_char:
+                return False
+    return True
