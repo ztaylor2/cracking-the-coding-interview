@@ -20,9 +20,10 @@ def unique_charactors(input_string):
 
 def unique_charactors_no_data_structure(input_string):
     """Determine if a string has all unique charactors without using a data structure."""
-    while input_string:
-        char = input_string.pop(0)
-        for remaining_char in input_string:
+    charactor_list = list(input_string)
+    while charactor_list:
+        char = charactor_list.pop(0)
+        for remaining_char in charactor_list:
             if char == remaining_char:
                 return False
     return True
