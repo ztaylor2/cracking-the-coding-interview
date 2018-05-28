@@ -20,7 +20,7 @@ node two is found return True, else return False
 """
 
 
-def is_route(graph, node1, node2):
+def is_route_bfs(graph, node1, node2):
     """Determine if there is a route between two nodes."""
     queue = [node1]
     visited_nodes = set()
@@ -32,4 +32,18 @@ def is_route(graph, node1, node2):
                     return True
                 queue.append(child_node)
         visited_nodes.add(current_node)
+    return False
+
+
+def is_route_dfs(graph, node1, node2):
+    """Determine if there is a route between two nodes."""
+    def dfs(current_node, visited_nodes):
+        for child_node in graph[current_node]:
+            if child_node not in visited_nodes:
+                if child_node == node2:
+                    return True
+                return dfs(child_node, visited_nodes + [current_node])
+
+    if dfs(node1, []):
+        return True
     return False
