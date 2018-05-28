@@ -20,3 +20,12 @@ class LinkedList(object):
     def push(self, val):
         """Add a value to the front of the linked list."""
         self.head = Node(val, self.head)
+
+    def as_list(self):
+        """Return the linked list as a list for easy testing."""
+        curr_node = self.head
+        ll_list = []
+        while curr_node:
+            ll_list.append(curr_node.val)
+            curr_node = curr_node.next
+        return ll_list
