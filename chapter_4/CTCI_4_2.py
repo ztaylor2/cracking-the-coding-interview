@@ -24,17 +24,3 @@ def create_tree(input_list):
             next_lists.append(current_list[:middle_index])
             next_lists.append(current_list[middle_index + 1:])
     return tree_order
-
-
-
-    # def rec_create_tree(input_list):
-    #     """Create the smallest tree possible given the input list."""
-    #     middle_index = len(input_list) // 2
-    #     if middle_index < len(input_list):
-    #         tree_order.append(input_list[middle_index])
-    #         rec_create_tree(input_list[:middle_index])
-    #         rec_create_tree(input_list[middle_index + 1:])
-
-    # rec_create_tree(input_list)
-
-    # return tree_order
