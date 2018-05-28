@@ -16,6 +16,7 @@ if input is odd you need even number of ever letter except one.
 
 def palindrome_permutation(input_string):
     """Check if it is a permutation of a palindrome."""
+    input_string = input_string.lower().replace(' ', '')
     letters = {}
     for letter in input_string:
         if letter in letters:
