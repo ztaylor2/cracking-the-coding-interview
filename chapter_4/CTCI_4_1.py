@@ -7,7 +7,7 @@ input:
     graph = {'a': ['b', 'c'],
              'b': ['d'],
              'c': [],
-             'd': [],}
+             'd': []}
 
     node1 = 'a'
     node2 = 'd'
