@@ -16,17 +16,18 @@ from linked_list import LinkedList
 
 def list_of_depths(bst):
     """Create a linked list for every depth of the bst."""
-    previous_level = []
+    previous_level = [bst.root]
     current_level = [bst.root]
-    list_of_levels = [bst.root]
+    list_of_levels = [[bst.root.val]]
 
     while current_level:
 
         current_node = current_level.pop(0)
 
-        if previous_level[-1] not in current_level:
-            list_of_levels.append(current_level)
-            previous_level = current_level
+        if previous_level:
+            if previous_level[-1] not in current_level:
+                list_of_levels.append([node.val for node in current_level])
+                previous_level = current_level
 
         if current_node.left:
             current_level.append(current_node.left)
