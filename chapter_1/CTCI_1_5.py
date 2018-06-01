@@ -36,6 +36,9 @@ def one_away(string_1, string_2):
         if key not in string_1_contents:
             num_edits += string_2_contents[key]
 
+    if len(string_1) == len(string_2):
+        num_edits -= 1
+
     if num_edits > 1:
         return False
     return True
