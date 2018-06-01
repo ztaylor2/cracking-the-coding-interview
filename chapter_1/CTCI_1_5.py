@@ -12,12 +12,11 @@ pale, bale -> true
 pale, bake -> false
 """
 
-# bruit force solution
+# brute force solution
 
 
 def one_away(string_1, string_2):
     """Determine if the two strings are one edit away."""
-    # num_edits = abs(len(string_1) - len(string_2))
     num_edits = 0
     string_1_contents = {}
     string_2_contents = {}
