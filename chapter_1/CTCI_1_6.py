@@ -16,12 +16,15 @@ return the original string.
 
 def string_compression(input_string):
     """Perform a string compression on the input string."""
-    compressed_string = input_string[0]
+    compressed_string = ''
     char_count = 1
     prev_char = ''
     for char in input_string:
         if char == prev_char:
             char_count += 1
         else:
-            compressed_string = compressed_string + char + str(char_count)
+            compressed_string = compressed_string + str(char_count) + char
+            char_count = 1
+        prev_char = char
+
     return compressed_string
