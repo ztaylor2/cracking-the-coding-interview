@@ -27,4 +27,4 @@ def string_compression(input_string):
             char_count = 1
         prev_char = char
 
-    return compressed_string
+    return compressed_string[1:] + str(char_count)
