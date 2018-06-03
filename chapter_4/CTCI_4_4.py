@@ -3,6 +3,9 @@
 
 def check_bal_of_tree(node):
     """."""
+    if node is None:
+        return True
+
     to_visit = [node]
 
     while to_visit:
